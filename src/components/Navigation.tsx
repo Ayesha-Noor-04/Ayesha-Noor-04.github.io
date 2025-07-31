@@ -23,15 +23,27 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
+    console.log('Navigation clicked:', href);
+    
     // Get the section index and trigger scroll snap
     const sections = ['#home', '#about', '#projects', '#experience', '#contact'];
     const sectionIndex = sections.indexOf(href);
+    
+    console.log('Section index:', sectionIndex);
     
     if (sectionIndex !== -1) {
       // Dispatch custom event for scroll snapping
       window.dispatchEvent(new CustomEvent('navigateToSection', { 
         detail: { index: sectionIndex } 
       }));
+      console.log('Dispatched navigateToSection event with index:', sectionIndex);
+    } else {
+      // Fallback to regular scrolling
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        console.log('Fallback scroll to element:', href);
+      }
     }
     
     setIsMobileMenuOpen(false);
