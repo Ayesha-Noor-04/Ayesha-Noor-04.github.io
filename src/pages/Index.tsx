@@ -6,6 +6,7 @@ import AboutSection from '@/components/AboutSection';
 import ProjectsSection1 from '@/components/ProjectsSection1';
 import ProjectsSection2 from '@/components/ProjectsSection2';
 import ProjectsSection3 from '@/components/ProjectsSection3';
+import SkillsSection from '@/components/SkillsSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -14,7 +15,7 @@ import DynamicBackground from '@/components/DynamicBackground';
 import { useScrollSnap } from '@/hooks/useScrollSnap';
 
 const Index = () => {
-  const sections = ['#home', '#about', '#projects', '#projects2', '#projects3', '#experience', '#contact'];
+  const sections = ['#home', '#about', '#projects', '#projects2', '#projects3', '#skills', '#experience', '#contact'];
   const { currentSection, isScrolling, goToSection } = useScrollSnap({ 
     sections,
     threshold: 50,
@@ -36,6 +37,7 @@ const Index = () => {
         <ProjectsSection1 />
         <ProjectsSection2 />
         <ProjectsSection3 />
+        <SkillsSection />
         <ExperienceSection />
         <ContactSection />
         <Footer />
