@@ -26,8 +26,13 @@ const Navigation = () => {
     console.log('Navigation clicked:', href);
     
     // Get the section index and trigger scroll snap
-    const sections = ['#home', '#about', '#projects', '#experience', '#contact'];
-    const sectionIndex = sections.indexOf(href);
+    const sections = ['#home', '#about', '#projects', '#projects2', '#projects3', '#experience', '#contact'];
+    let sectionIndex = sections.indexOf(href);
+    
+    // If projects is clicked, go to first projects section
+    if (href === '#projects') {
+      sectionIndex = 2; // Index of #projects in the sections array
+    }
     
     console.log('Section index:', sectionIndex);
     

@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { ArrowDown } from 'lucide-react';
 
@@ -37,19 +38,8 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Profile Image */}
-          <div className="mb-8 animate-fade-in">
-            <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-portfolio-maroon/50 animate-glow">
-              <img
-                src="/lovable-uploads/ff9c1857-f626-4508-b611-b16f9c1f47b9.png"
-                alt="Ayesha Noor"
-                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-              />
-            </div>
-          </div>
-
           {/* Hero Text */}
-          <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+          <div className="space-y-6 animate-fade-in">
             <h1 className="hero-text text-portfolio-white">
               Ayesha
               <span className="text-gradient block md:inline md:ml-4">Noor</span>
