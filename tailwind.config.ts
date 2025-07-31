@@ -18,7 +18,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'didot': ['Playfair Display', 'serif'],
+				'serif': ['Playfair Display', 'serif'],
+			},
 			colors: {
+				// Portfolio Custom Colors
+				'portfolio': {
+					'black': 'hsl(var(--portfolio-black))',
+					'deep-black': 'hsl(var(--portfolio-deep-black))',
+					'maroon': 'hsl(var(--portfolio-maroon))',
+					'maroon-light': 'hsl(var(--portfolio-maroon-light))',
+					'gunmetal': 'hsl(var(--portfolio-gunmetal))',
+					'gunmetal-light': 'hsl(var(--portfolio-gunmetal-light))',
+					'silver': 'hsl(var(--portfolio-silver))',
+					'chrome': 'hsl(var(--portfolio-chrome))',
+					'white': 'hsl(var(--portfolio-white))',
+				},
+				// Standard Theme Colors
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -52,16 +69,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
