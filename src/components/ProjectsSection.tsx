@@ -73,7 +73,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20 bg-portfolio-deep-black">
+    <section id="projects" ref={sectionRef} className="min-h-screen py-20 bg-portfolio-deep-black scroll-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center text-portfolio-white smooth-reveal">

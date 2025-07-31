@@ -26,7 +26,7 @@ const HeroSection = () => {
     <section
       id="home"
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center dynamic-bg relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center dynamic-bg relative overflow-hidden scroll-section"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-20">

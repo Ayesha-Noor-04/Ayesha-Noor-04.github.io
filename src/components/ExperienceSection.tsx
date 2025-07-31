@@ -70,7 +70,7 @@ const ExperienceSection = () => {
   };
 
   return (
-    <section id="experience" ref={sectionRef} className="py-20 bg-portfolio-black/30">
+    <section id="experience" ref={sectionRef} className="min-h-screen py-20 bg-portfolio-black/30 scroll-section">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="section-title text-center text-portfolio-white smooth-reveal">

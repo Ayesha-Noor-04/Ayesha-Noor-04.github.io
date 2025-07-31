@@ -23,10 +23,17 @@ const Navigation = () => {
   ];
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Get the section index and trigger scroll snap
+    const sections = ['#home', '#about', '#projects', '#experience', '#contact'];
+    const sectionIndex = sections.indexOf(href);
+    
+    if (sectionIndex !== -1) {
+      // Dispatch custom event for scroll snapping
+      window.dispatchEvent(new CustomEvent('navigateToSection', { 
+        detail: { index: sectionIndex } 
+      }));
     }
+    
     setIsMobileMenuOpen(false);
   };
 

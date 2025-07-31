@@ -72,6 +72,11 @@ Typography: Didot/Playfair Display for elegant serif styling
   body {
     @apply bg-background text-foreground overflow-x-hidden;
     font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
   
   .dynamic-bg {
@@ -155,4 +160,28 @@ Typography: Didot/Playfair Display for elegant serif styling
 @keyframes glow {
   from { box-shadow: 0 0 20px hsl(var(--portfolio-maroon) / 0.5); }
   to { box-shadow: 0 0 30px hsl(var(--portfolio-maroon) / 0.8), 0 0 40px hsl(var(--portfolio-maroon) / 0.3); }
+}
+
+/* Smooth scroll snapping */
+.scroll-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--portfolio-deep-black));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--portfolio-maroon));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--portfolio-maroon-light));
 }
