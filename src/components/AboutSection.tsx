@@ -59,158 +59,73 @@ const AboutSection = () => {
             About Me
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="space-y-6">
-              <div className="smooth-reveal">
-                <p className="text-lg text-portfolio-silver leading-relaxed">
-                  I am an undergraduate student at <span className="text-portfolio-maroon font-semibold">FAST Islamabad</span> with a strong foundation in data science, analytics, and algorithm optimization. I have hands-on experience in developing data-driven applications and working with advanced data structures in C++.
-                </p>
-              </div>
-
-              <div className="smooth-reveal">
-                <p className="text-lg text-portfolio-silver leading-relaxed">
-                  Proficient in <span className="text-portfolio-maroon font-semibold">SQL, Python, and statistical analysis</span>, I focus on extracting meaningful insights from complex datasets, optimizing data pipelines, and using data to support informed decision-making.
-                </p>
-              </div>
-
-              <div className="smooth-reveal">
-                <p className="text-lg text-portfolio-silver leading-relaxed">
-                  Continuously exploring new technologies, I work to improve my analytical skills and contribute to effective data-driven solutions. Beyond coding, I'm passionate about creating positive impact through volunteer work.
-                </p>
-              </div>
-
-              {/* Skills and Technical Proficiencies */}
-              <div className="smooth-reveal">
-                <h3 className="text-xl font-semibold text-portfolio-white mb-4">Technical Proficiencies</h3>
+          <div className="flex justify-center">
+            <div className="max-w-2xl text-center">
+              {/* University */}
+              <div className="smooth-reveal mb-12">
+                <h3 className="text-2xl font-semibold text-portfolio-maroon mb-8">
+                  CS @ FAST Islamabad
+                </h3>
                 
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div>
-                    <h4 className="text-portfolio-maroon font-semibold mb-3">Programming Languages</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">C++</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Python</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">C# (.NET)</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">SQL</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                    </div>
+                {/* Bullet Points */}
+                <div className="space-y-4 text-left">
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Passionate about data science and analytics with hands-on experience in Python and SQL
+                    </p>
                   </div>
                   
-                  <div>
-                    <h4 className="text-portfolio-maroon font-semibold mb-3">Core Concepts</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Data Structures & Algorithms</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Object-Oriented Programming</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Database Management</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Input/Output Systems</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                    </div>
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Specialized in algorithm optimization and advanced data structures using C++
+                    </p>
                   </div>
                   
-                  <div>
-                    <h4 className="text-portfolio-maroon font-semibold mb-3">Data Science & Analytics</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Data Science & Analytics</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">NumPy & Pandas</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Machine Learning Basics</span>
-                        <span className="text-portfolio-chrome">Beginner</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Data Visualization</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                    </div>
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Experienced in system-level programming and performance-critical applications
+                    </p>
                   </div>
                   
-                  <div>
-                    <h4 className="text-portfolio-maroon font-semibold mb-3">Development & Tools</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Game Development</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Web Development</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">UI/UX Design</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Version Control (Git)</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">CLI Applications</span>
-                        <span className="text-portfolio-chrome">Advanced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">SFML</span>
-                        <span className="text-portfolio-chrome">Experienced</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">Text Processing</span>
-                        <span className="text-portfolio-chrome">Intermediate</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-portfolio-silver">CI/CD</span>
-                        <span className="text-portfolio-chrome">Beginner</span>
-                      </div>
-                    </div>
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Full-stack web developer with expertise in modern frameworks and responsive design
+                    </p>
+                  </div>
+                  
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Game development enthusiast with published projects using SFML and advanced graphics
+                    </p>
+                  </div>
+                  
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Active volunteer at Sundas Foundation, supporting children with thalassemia
+                    </p>
+                  </div>
+                  
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Committed to continuous learning and staying current with emerging technologies
+                    </p>
+                  </div>
+                  
+                  <div className="smooth-reveal flex items-start">
+                    <span className="text-portfolio-maroon mr-3 mt-1">•</span>
+                    <p className="text-lg text-portfolio-silver">
+                      Strong foundation in database management and building scalable data-driven solutions
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Highlights Grid */}
-            <div className="grid sm:grid-cols-2 gap-6">
-              {highlights.map((item, index) => (
-                <div
-                  key={item.title}
-                  className="elegant-card smooth-reveal glow-on-hover"
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                  <div className="text-portfolio-maroon mb-4">
-                    <item.icon size={32} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-portfolio-white mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-portfolio-silver text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
