@@ -88,6 +88,19 @@ const ProjectsSection1 = () => {
             Featured Projects
           </h2>
 
+          {/* GitHub Link */}
+          <div className="text-center mb-12 smooth-reveal">
+            <a
+              href="https://github.com/Ayesha-Noor-04"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-portfolio-maroon text-portfolio-maroon hover:bg-portfolio-maroon hover:text-portfolio-white rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
+              <Github size={20} />
+              <span>View All Projects on GitHub</span>
+            </a>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div

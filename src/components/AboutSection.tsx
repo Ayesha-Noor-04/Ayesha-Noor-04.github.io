@@ -80,18 +80,114 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              {/* Skills Tags */}
+              {/* Skills and Technical Proficiencies */}
               <div className="smooth-reveal">
-                <h3 className="text-xl font-semibold text-portfolio-white mb-4">Core Technologies</h3>
-                <div className="flex flex-wrap gap-3">
-                  {['C++', 'Python', 'SQL', 'Data Analysis', 'SFML', 'Git', 'Object-Oriented Programming', 'Data Structures'].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-4 py-2 bg-portfolio-gunmetal/50 text-portfolio-chrome rounded-full text-sm font-medium hover:bg-portfolio-maroon/30 transition-colors duration-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                <h3 className="text-xl font-semibold text-portfolio-white mb-4">Technical Proficiencies</h3>
+                
+                <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <h4 className="text-portfolio-maroon font-semibold mb-3">Programming Languages</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">C++</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Python</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">C# (.NET)</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">SQL</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-portfolio-maroon font-semibold mb-3">Core Concepts</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Data Structures & Algorithms</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Object-Oriented Programming</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Database Management</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Input/Output Systems</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-portfolio-maroon font-semibold mb-3">Data Science & Analytics</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Data Science & Analytics</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">NumPy & Pandas</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Machine Learning Basics</span>
+                        <span className="text-portfolio-chrome">Beginner</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Data Visualization</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-portfolio-maroon font-semibold mb-3">Development & Tools</h4>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Game Development</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Web Development</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">UI/UX Design</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Version Control (Git)</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">CLI Applications</span>
+                        <span className="text-portfolio-chrome">Advanced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">SFML</span>
+                        <span className="text-portfolio-chrome">Experienced</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">Text Processing</span>
+                        <span className="text-portfolio-chrome">Intermediate</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-portfolio-silver">CI/CD</span>
+                        <span className="text-portfolio-chrome">Beginner</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

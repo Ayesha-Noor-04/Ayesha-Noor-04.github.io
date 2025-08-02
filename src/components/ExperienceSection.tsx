@@ -174,30 +174,6 @@ const ExperienceSection = () => {
                 ))}
               </div>
 
-              {/* Skills Summary */}
-              <div className="mt-8 elegant-card smooth-reveal">
-                <h4 className="text-lg font-semibold text-portfolio-white mb-4">
-                  Technical Proficiencies
-                </h4>
-                <div className="grid grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-portfolio-maroon font-medium mb-2">Programming</p>
-                    <ul className="text-portfolio-silver space-y-1">
-                      <li>• C++ (Advanced)</li>
-                      <li>• Python</li>
-                      <li>• SQL</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <p className="text-portfolio-maroon font-medium mb-2">Specializations</p>
-                    <ul className="text-portfolio-silver space-y-1">
-                      <li>• Data Science</li>
-                      <li>• Algorithm Design</li>
-                      <li>• Game Development</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
