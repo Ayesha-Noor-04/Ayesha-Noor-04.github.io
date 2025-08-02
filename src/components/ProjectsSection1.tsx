@@ -1,9 +1,8 @@
 
-import { useState, useEffect, useRef } from 'react';
-import { Github, ExternalLink, Code, Database, Gamepad2, FileText, Settings } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { Github, Code, FileText, Settings, HardDrive } from 'lucide-react';
 
 const ProjectsSection1 = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -36,33 +35,48 @@ const ProjectsSection1 = () => {
       title: "Git Version Control System",
       subtitle: "Custom VCS Implementation",
       description: "A complete version control system built from scratch using C++, featuring tree-based storage architecture and custom SHA-256 hashing for file integrity.",
-      longDescription: "This project demonstrates deep understanding of data structures and algorithms by implementing a full-featured version control system. Features include branching, merging, commit history tracking, and efficient storage using tree structures.",
       technologies: ["C++", "Tree Data Structures", "SHA-256", "File System"],
       icon: Code,
       color: "portfolio-maroon",
-      date: "2024"
+      date: "2024",
+      link: "https://github.com/Ayesha-Noor-04/Git",
+      linkType: "github"
     },
     {
       id: 2,
-      title: "Command Line Notepad",
+      title: "Notepad - Command Line Interface",
       subtitle: "Advanced Text Editor",
       description: "A sophisticated command-line text editor implementing 2D linked lists for text management, stack-based undo/redo, and tree-based word prediction.",
-      longDescription: "Advanced text editor showcasing complex data structure implementation. Features include efficient text manipulation using 2D linked lists, intelligent undo/redo system with stacks, and predictive text using tree structures for enhanced user experience.",
       technologies: ["C++", "2D Linked Lists", "Stack ADT", "Tree Structures", "Algorithms"],
       icon: FileText,
       color: "portfolio-maroon-light",
-      date: "2024"
+      date: "2024",
+      link: "https://github.com/Ayesha-Noor-04/Notepad",
+      linkType: "github"
     },
     {
       id: 3,
-      title: "Ticket Management System",
-      subtitle: "Helpdesk Desktop Application",
-      description: "Professional helpdesk application with role-based access, real-time ticket tracking, and comprehensive reporting built with C# and Windows Forms.",
-      longDescription: "Desktop helpdesk application featuring Admin and User role-based authentication, complete ticket lifecycle management from creation to resolution, real-time status updates, and advanced reporting with sorting and filtering. Uses SQL Server for robust data persistence and .NET for seamless data operations.",
-      technologies: ["C#", "Windows Forms", "SQL Server", "Memory Management", ".NET"],
-      icon: Settings,
+      title: "Bomberman Game",
+      subtitle: "2D Game Development",
+      description: "Classic Bomberman game recreation using C++ and SFML graphics library, featuring advanced collision detection and game physics.",
+      technologies: ["C++", "SFML", "Object-Oriented Programming", "Game Physics", "Collision Detection"],
+      icon: Code,
       color: "portfolio-gunmetal",
-      date: "June 2025"
+      date: "2024",
+      link: "https://github.com/Ayesha-Noor-04/Bomberman",
+      linkType: "github"
+    },
+    {
+      id: 4,
+      title: "Centipede Game",
+      subtitle: "Classic Arcade Recreation",
+      description: "Faithful recreation of the classic Centipede arcade game using C++ and SFML, implementing 2D grid-based movement and game logic.",
+      technologies: ["C++", "SFML", "2D Grid Logic", "Game Development", "Graphics Programming"],
+      icon: Code,
+      color: "portfolio-gunmetal-light",
+      date: "2024",
+      link: "https://github.com/Ayesha-Noor-04/Centipede",
+      linkType: "github"
     }
   ];
 
@@ -78,10 +92,7 @@ const ProjectsSection1 = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className={`elegant-card group cursor-pointer smooth-reveal ${
-                  selectedProject === project.id ? 'ring-2 ring-portfolio-maroon' : ''
-                }`}
-                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+                className="elegant-card group smooth-reveal"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -89,12 +100,18 @@ const ProjectsSection1 = () => {
                     <project.icon className={`text-${project.color}`} size={24} />
                   </div>
                   <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300">
-                      <Github size={16} className="text-portfolio-silver" />
-                    </button>
-                    <button className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300">
-                      <ExternalLink size={16} className="text-portfolio-silver" />
-                    </button>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300"
+                    >
+                      {project.linkType === 'github' ? (
+                        <Github size={16} className="text-portfolio-silver" />
+                      ) : (
+                        <HardDrive size={16} className="text-portfolio-silver" />
+                      )}
+                    </a>
                   </div>
                 </div>
 
@@ -116,7 +133,7 @@ const ProjectsSection1 = () => {
                   </div>
 
                   <p className="text-portfolio-silver leading-relaxed">
-                    {selectedProject === project.id ? project.longDescription : project.description}
+                    {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
@@ -128,12 +145,6 @@ const ProjectsSection1 = () => {
                         {tech}
                       </span>
                     ))}
-                  </div>
-
-                  <div className="text-center pt-2">
-                    <span className="text-xs text-portfolio-silver">
-                      Click to {selectedProject === project.id ? 'collapse' : 'expand'}
-                    </span>
                   </div>
                 </div>
               </div>

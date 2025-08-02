@@ -15,7 +15,7 @@ import DynamicBackground from '@/components/DynamicBackground';
 import { useScrollSnap } from '@/hooks/useScrollSnap';
 
 const Index = () => {
-  const sections = ['#home', '#about', '#projects', '#projects2', '#projects3', '#skills', '#experience', '#contact'];
+  const sections = ['#home', '#about', '#skills', '#projects', '#projects2', '#projects3', '#experience', '#contact'];
   const { currentSection, isScrolling, goToSection } = useScrollSnap({ 
     sections,
     threshold: 50,
@@ -34,10 +34,10 @@ const Index = () => {
       <div className="relative z-10">
         <HeroSection />
         <AboutSection />
+        <SkillsSection />
         <ProjectsSection1 />
         <ProjectsSection2 />
         <ProjectsSection3 />
-        <SkillsSection />
         <ExperienceSection />
         <ContactSection />
         <Footer />

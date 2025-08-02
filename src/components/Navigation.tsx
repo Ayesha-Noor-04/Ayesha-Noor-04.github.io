@@ -17,8 +17,8 @@ const Navigation = () => {
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Projects', href: '#projects' },
     { label: 'Experience', href: '#experience' },
     { label: 'Contact', href: '#contact' },
   ];
@@ -27,12 +27,12 @@ const Navigation = () => {
     console.log('Navigation clicked:', href);
     
     // Get the section index and trigger scroll snap
-    const sections = ['#home', '#about', '#projects', '#projects2', '#projects3', '#skills', '#experience', '#contact'];
+    const sections = ['#home', '#about', '#skills', '#projects', '#projects2', '#projects3', '#experience', '#contact'];
     let sectionIndex = sections.indexOf(href);
     
     // If projects is clicked, go to first projects section
     if (href === '#projects') {
-      sectionIndex = 2; // Index of #projects in the sections array
+      sectionIndex = 3; // Index of #projects in the sections array
     }
     
     console.log('Section index:', sectionIndex);

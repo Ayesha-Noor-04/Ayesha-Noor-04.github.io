@@ -1,9 +1,8 @@
 
-import { useState, useEffect, useRef } from 'react';
-import { Github, ExternalLink, Gamepad2, FileText, Search } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { Github, Settings, Search, Globe, HardDrive } from 'lucide-react';
 
 const ProjectsSection2 = () => {
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -32,37 +31,52 @@ const ProjectsSection2 = () => {
 
   const projects = [
     {
-      id: 4,
-      title: "Plagiarism Checker",
-      subtitle: "Text Similarity Analysis Tool",
-      description: "Object-oriented plagiarism detection system with tokenization, normalization, and percentage-based similarity reporting.",
-      longDescription: "Three-class architecture plagiarism detection system: Read class for file loading and tokenization, Process class for text normalization (case, punctuation), and Similarity class for calculating match percentages. Provides detailed similarity reports with configurable word matching rules.",
-      technologies: ["C++", "OOP", "File Handling", "Tokenization", "Text Analysis", "Memory Management"],
-      icon: Search,
-      color: "portfolio-maroon-light",
-      date: "July 2024"
-    },
-    {
       id: 5,
-      title: "Bomberman Game",
-      subtitle: "2D Game Development",
-      description: "Classic Bomberman game recreation using C++ and SFML graphics library, featuring advanced collision detection and game physics.",
-      longDescription: "Complete game development project demonstrating object-oriented programming principles, game loop implementation, sprite animation, and complex collision detection algorithms. Includes power-ups, multiple levels, and AI enemies.",
-      technologies: ["C++", "SFML", "Object-Oriented Programming", "Game Physics", "Collision Detection"],
-      icon: Gamepad2,
+      title: "Ticket Management System",
+      subtitle: "Helpdesk Desktop Application",
+      description: "Professional helpdesk application with role-based access, real-time ticket tracking, and comprehensive reporting built with C# and Windows Forms.",
+      technologies: ["C#", "Windows Forms", "SQL Server", "Memory Management", ".NET"],
+      icon: Settings,
       color: "portfolio-gunmetal",
-      date: "2024"
+      date: "June 2025",
+      link: "https://drive.google.com/file/d/1fvIGr-8ctylbPKzPEbEaKRNd19wE54vX/view?usp=drive_link",
+      linkType: "drive"
     },
     {
       id: 6,
-      title: "Centipede Game",
-      subtitle: "Classic Arcade Recreation",
-      description: "Faithful recreation of the classic Centipede arcade game using C++ and SFML, implementing 2D grid-based movement and game logic.",
-      longDescription: "Arcade game implementation focusing on precise game mechanics, sprite management, and efficient 2D grid-based collision systems. Features multiple difficulty levels, scoring system, and smooth gameplay mechanics with authentic arcade feel.",
-      technologies: ["C++", "SFML", "2D Grid Logic", "Game Development", "Graphics Programming"],
-      icon: Gamepad2,
-      color: "portfolio-gunmetal-light",
-      date: "2024"
+      title: "Plagiarism Checker",
+      subtitle: "Text Similarity Analysis Tool",
+      description: "Object-oriented plagiarism detection system with tokenization, normalization, and percentage-based similarity reporting.",
+      technologies: ["C++", "OOP", "File Handling", "Tokenization", "Text Analysis", "Memory Management"],
+      icon: Search,
+      color: "portfolio-maroon-light",
+      date: "July 2024",
+      link: "https://github.com/Ayesha-Noor-04/PlagiarismChecker",
+      linkType: "github"
+    },
+    {
+      id: 7,
+      title: "Clothing Website",
+      subtitle: "Responsive Web Design",
+      description: "Multi-page responsive clothing website with consistent navigation, modern UI/UX principles, and visual hierarchy optimization.",
+      technologies: ["HTML", "CSS", "Responsive Design", "UI/UX", "Visual Design"],
+      icon: Globe,
+      color: "portfolio-gunmetal",
+      date: "July 2023",
+      link: "https://github.com/Ayesha-Noor-04/Suroor-ClothingWebsite",
+      linkType: "github"
+    },
+    {
+      id: 8,
+      title: "Volunteer Cards and Donation Poster",
+      subtitle: "Visual Design for Nonprofit",
+      description: "Complete visual identity package for Sundas Foundation including volunteer ID cards and promotional materials.",
+      technologies: ["Canva", "Visual Design", "Branding", "Layout Design", "Typography"],
+      icon: Globe,
+      color: "portfolio-maroon-light",
+      date: "July 2024",
+      link: "https://docs.google.com/document/d/1lUXS-yGDbC1lrSpbO6dgvPSaEpEXoGQ0CCrYW2r-fq8/edit?usp=sharing",
+      linkType: "drive"
     }
   ];
 
@@ -74,10 +88,7 @@ const ProjectsSection2 = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
-                className={`elegant-card group cursor-pointer smooth-reveal ${
-                  selectedProject === project.id ? 'ring-2 ring-portfolio-maroon' : ''
-                }`}
-                onClick={() => setSelectedProject(selectedProject === project.id ? null : project.id)}
+                className="elegant-card group smooth-reveal"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -85,12 +96,18 @@ const ProjectsSection2 = () => {
                     <project.icon className={`text-${project.color}`} size={24} />
                   </div>
                   <div className="flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <button className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300">
-                      <Github size={16} className="text-portfolio-silver" />
-                    </button>
-                    <button className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300">
-                      <ExternalLink size={16} className="text-portfolio-silver" />
-                    </button>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-portfolio-gunmetal/50 rounded-lg hover:bg-portfolio-maroon/50 transition-colors duration-300"
+                    >
+                      {project.linkType === 'github' ? (
+                        <Github size={16} className="text-portfolio-silver" />
+                      ) : (
+                        <HardDrive size={16} className="text-portfolio-silver" />
+                      )}
+                    </a>
                   </div>
                 </div>
 
@@ -112,7 +129,7 @@ const ProjectsSection2 = () => {
                   </div>
 
                   <p className="text-portfolio-silver leading-relaxed">
-                    {selectedProject === project.id ? project.longDescription : project.description}
+                    {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2">
@@ -124,12 +141,6 @@ const ProjectsSection2 = () => {
                         {tech}
                       </span>
                     ))}
-                  </div>
-
-                  <div className="text-center pt-2">
-                    <span className="text-xs text-portfolio-silver">
-                      Click to {selectedProject === project.id ? 'collapse' : 'expand'}
-                    </span>
                   </div>
                 </div>
               </div>
