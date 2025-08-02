@@ -107,7 +107,7 @@ const AboutSection = () => {
                   <div className="smooth-reveal flex items-start">
                     <span className="text-portfolio-maroon mr-3 mt-1">•</span>
                     <p className="text-lg text-portfolio-silver">
-                      Active volunteer at Sundas Foundation, supporting children with thalassemia
+                      Former volunteer at Sundas Foundation, supported children with thalassemia
                     </p>
                   </div>
                   
